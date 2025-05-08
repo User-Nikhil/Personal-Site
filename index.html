@@ -20,6 +20,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
   <!--
     - google font link
@@ -213,14 +214,14 @@
 
         <section class="about-text">
           <p>
-            Hey, I’m Nikhil Shah — a tech enthusiast currently pursuing a Bachelor of Computer Science at Southeastern Louisiana University.
+            Hey, I'm Nikhil Shah — a tech enthusiast currently pursuing a Bachelor of Computer Science at Southeastern Louisiana University.
             This site is my digital space: resume, certificates, and a glimpse into my tech journey.
             I love solving problems, learning new things, and building cool stuff. Thanks for stopping by!
           </p>
 
           <p>
             I believe tech is more than just code — it's about adapting, collaborating, and never stopping the learning process.
-            Thanks for exploring my portfolio — I’m excited for the innovations and opportunities that lie ahead in this ever-changing tech world.
+            Thanks for exploring my portfolio — I'm excited for the innovations and opportunities that lie ahead in this ever-changing tech world.
             
                       </p>
         </section>
@@ -1141,7 +1142,7 @@
               <a href="https://cs50.harvard.edu/certificates/5d9cd7d1-06c0-4031-88b9-22e2059739ff">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/cs50p.jpg" alt="CS50’s Introduction to Programming with Python" loading="lazy">
+                  <img src="./assets/images/cs50p.jpg" alt="CS50's Introduction to Programming with Python" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
@@ -1154,7 +1155,7 @@
                     <category category="Harvard">Harvard</Harvard>
                   </div>
 
-                  <h3 class="h3 blog-item-title">CS50’s Introduction to Programming with Python</h3>
+                  <h3 class="h3 blog-item-title">CS50's Introduction to Programming with Python</h3>
 
                   <p class="blog-text">
                     Gained expertise in Python programming, problem-solving, and computer science fundamentals with Harvard's CS50 course.
@@ -1334,7 +1335,7 @@
             </li>
 
             <li class="blog-post-item">
-              <a href="www.thedigitaladda.com">
+              <a href="https://www.thedigitaladda.com">
 
                 <figure class="blog-banner-box">
                   <img src="./assets/images/microsoft security.jpg" alt=" Microsoft Security Operations Analyst Certification" loading="lazy">
@@ -1347,7 +1348,7 @@
 
                     <span class="dot"></span>
 
-                    <category category="Digital Adda">Digital Adda</Digital Adda>
+                    
                   </div>
 
                   <h3 class="h3 blog-item-title"> Microsoft Security Operations Analyst Certification</h3>
@@ -1358,7 +1359,9 @@
 
                 </div>
 
-             
+              </a>
+            </li>
+
           </ul>
 
         </section>
@@ -1370,28 +1373,28 @@
 
 
       <!--
-        - #CONTACT
+        - #CONTACT  
       -->
 
-      <article class="contact" data-page="contact">
+      <article class="contact" data-page="contact" data-aos="fade-up">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
+        <section class="mapbox" data-mapbox data-aos="zoom-in">
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.686250783171!2d-90.47865670112674!3d30.510504309024135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8627229177f0842f%3A0x10cf086bbd92069d!2s801%20Pecan%20St%2C%20Hammond%2C%20LA%2070401!5e0!3m2!1sen!2sus!4v1728242236503!5m2!1sen!2sus
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1718.686250783171!2d-90.47865670112674!3d30.510504309024135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8627229177f0842f%3A0x10cf086bbd92069d!2s801%20Pecan%20St%2C%20Hammond%2C%20LA%2070401!5e0!3m2!1sen!2sus!4v1728242236503!5m2!1sen!2sus"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
 
-        <section class="contact-form">
+        <section class="contact-form" data-aos="fade-up">
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formspree.io/f/mgvkyjzb" method="POST" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1401,9 +1404,9 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span> <a href="mailto:userneekz@gmail.com" class="contact-link">Send Message</a></span>
+              <span>Send Message</span>
             </button>
 
           </form>
@@ -1415,6 +1418,8 @@
     </div>
 
   </main>
+
+  <div id="form-success" style="display:none;color:var(--orange-yellow-crayola);margin-top:1em;">Thank you! Your message has been sent.</div>
 
 
 
@@ -1431,6 +1436,14 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 
 </body>
 
